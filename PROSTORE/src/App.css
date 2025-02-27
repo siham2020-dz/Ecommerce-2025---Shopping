@@ -1,42 +1,193 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Import de la police */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+/* Réinitialisation des marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ============================= */
+/* Styles du Header */
+/* ============================= */
+
+.bg-blue {
+  background-color: #233a95;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.headerWrapper {
+  margin-bottom: 40px;
 }
 
-.card {
-  padding: 2em;
+.headerWrapper .top-strip {
+  padding: 8px 0;
 }
 
-.read-the-docs {
-  color: #888;
+.headerWrapper .top-strip p {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================= */
+/* Logo */
+/* ============================= */
+
+.logoWrapper img {
+  width: 100%;
+}
+
+/* ============================= */
+/* Dropdown Pays */
+/* ============================= */
+
+.header .part2 .countryDrop {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 60px;
+  min-width: 170px;
+  text-align: left;
+  justify-content: flex-start;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  padding: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.header .part2 .countryDrop .label {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 16px;
+}
+
+.header .part2 .countryDrop .name {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.header .part2 .countryDrop span.ml-auto svg {
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+/* ============================= */
+/* Barre de recherche */
+/* ============================= */
+
+.headerSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 60px;
+  background-color: #f3f4f7;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.headerSearch input {
+  flex: 1;
+  background: transparent;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+}
+
+.headerSearch button {
+  cursor: pointer;
+  color: #000;
+}
+
+.headerSearch button svg {
+  font-size: 20px;
+}
+
+/* ============================= */
+/* Barre de User et Panier */
+/* ============================= */
+
+header .part3 {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Ajout d'espace entre l'utilisateur, le prix et le panier */
+}
+
+header .part3 .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+header .part3 .circle svg {
+  font-size: 30px;
+}
+
+header .cartTab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajout d'espace entre le prix et l'icône panier */
+}
+
+header .cartTab .button {
+  background: #fff1ee;
+}
+
+header .cartTab .price {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+header .cartTab svg {
+  color: #ea2b0f;
+}
+
+/* Style du chiffre sur le panier */
+header .cartTab .count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ea2b0f;
+  border-radius: 50%;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
