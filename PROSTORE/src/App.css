@@ -21,6 +21,9 @@ body {
     max-width: 1240px;
   }
 }
+::-webkit-scrollbar{width: 8px !important;height:8px ;}
+::-webkit-scrollbar-thumb{background: #ccc !important ;}
+::-webkit-scrollbar-track{background: transparent !important ;}
 
 /* ============================= */
 /* Styles du Header */
@@ -100,7 +103,41 @@ body {
   opacity: 0.7;
   font-size: 16px;
 }
+.locationModal .MuiPaper-elevation{
+  padding: 25px;
+  position: relative;
 
+}
+.locationModal .countryList{
+  margin-bottom:0px;
+  max-height: 400px;
+  overflow: hidden;
+  overflow-x:hidden ;
+}
+.locationModal .countryList li{
+  width: 100%;
+  list-style: none;
+}
+.locationModal .countryList li button{
+  width: 100%;
+  color: #000 !important;
+  text-transform: capitalize !important;
+  justify-content: flex-start !important;
+  padding: 15px 20px !important;
+}
+.locationModal .close_{
+  position: absolute;
+  top:10px ;
+  right:10px ;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px !important;
+}
+.locationModal .close_ svg {
+  font-size: 22px;
+}
 /* ============================= */
 /* Barre de recherche */
 /* ============================= */
@@ -108,19 +145,20 @@ body {
 .headerSearch {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 600px; 
   justify-content: space-between;
-  width: 60%;
-  height: 60px;
-  background-color: #f3f4f7;
-  padding: 10px;
-  border-radius: 10px;
+  height: 60px; 
+  background-color: #ffffff; 
+  padding: 5px 15px;
+  border-radius: 10px; 
+  border: 1px solid rgba(0, 0, 0, 0.2); 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-right: 20px;
 }
-
 .headerSearch input {
-  flex-grow: 1; /* Utilisation de flex-grow pour un meilleur contrôle de la largeur */
+  flex-grow: 1; 
   background: transparent;
   outline: none;
   border: none;
@@ -136,6 +174,7 @@ body {
 
 .headerSearch button svg {
   font-size: 20px;
+  opacity: 0.8;
 }
 
 /* ============================= */
@@ -230,7 +269,8 @@ nav .allCatTab .text {
 nav  .allCatTab .icon1 svg{font-size: 20px !important;}
 nav  .allCatTab .icon2 svg{font-size: 15px !important;}
 nav .navPart2 ul{margin-bottom: 0px;display: flex;}
-nav .navPart2 ul li a {font-size: 15px;font-weight: 600;text-decoration: none;color: rgba(0, 0, 0, 0.7);text-transform: uppercase;display: flex;align-items: center;padding: 10px 20px;
+nav .navPart2 ul li a{text-decoration: none;}
+nav .navPart2 ul li a button{font-size: 14px !important;font-weight: 500;text-decoration: none;color: rgba(0, 0, 0, 0.9);text-transform: uppercase;display: flex;align-items: center;padding: 10px 15px;
 transition: all 0.2s ease-in-out;border-radius: 25px;}
 nav .navPart2 ul li a svg{background: #f0faff;}
 nav .navPart2 ul li a:hover{background: #f0faff;color: #2bbef9;}

@@ -6,6 +6,7 @@ import { IoBagOutline } from "react-icons/io5";
 import Button from '@mui/material/Button';
 import Navigation from './Navigation/Navigation';
 import CountryDropDown from "../CountryDropDown/CountryDropDown";
+import SearchBox from "./SearchBox/SearchBox"; 
 
 const Header = () => {
   return (
@@ -30,14 +31,7 @@ const Header = () => {
             </div>
             <div className="col-sm-10 d-flex align-items-center part2">
                 <CountryDropDown />
-               {/*Header Search Start Here  */}
-                    <div className="headerSearch ml-3 mr-3">
-                        <input type='text' placeholder="Rechercher votre produit ..." />
-                        <Button>
-                        <IoIosSearch />
-                        </Button>
-                    </div>
-               {/*Header Search ends Here  */}
+                <SearchBox />
 
                <div className="part3 d-flex align-items-center ml-auto">
                 <Button className="circle mr-3">
