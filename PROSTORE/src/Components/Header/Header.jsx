@@ -4,7 +4,7 @@ import { IoIosSearch } from "react-icons/io";
 import { FaRegUser } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 import Button from '@mui/material/Button';
-
+import Navigation from './Navigation/Navigation';
 import CountryDropDown from "../CountryDropDown/CountryDropDown";
 
 const Header = () => {
@@ -64,6 +64,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <Navigation />
     </>
   );
 };
