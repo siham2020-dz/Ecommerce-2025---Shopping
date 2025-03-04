@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
-import { IoIosSearch } from "react-icons/io";
+import { useContext } from "react";
 import { FaRegUser } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 import Button from '@mui/material/Button';
 import Navigation from './Navigation/Navigation';
 import CountryDropDown from "../CountryDropDown/CountryDropDown";
 import SearchBox from "./SearchBox/SearchBox"; 
+import {MyContext} from '../../App';
 
 const Header = () => {
+    const context = useContext(MyContext);
   return (
     <>
       <div className="headerWrapper">
@@ -30,7 +32,10 @@ const Header = () => {
               </Link>
             </div>
             <div className="col-sm-10 d-flex align-items-center part2">
-                <CountryDropDown />
+                {
+                    context.countryList.length!==0 && <CountryDropDown /> 
+                }
+                
                 <SearchBox />
 
                <div className="part3 d-flex align-items-center ml-auto">
@@ -39,7 +44,7 @@ const Header = () => {
                 </Button>
                 <div className="ml-auto cartTab d-flex align-items-center">
                     <span className="price">3.25 € </span>
-                    <div class='position-relative  ml-2'>
+                    <div className='position-relative  ml-2'>
                         <Button className="circle ">
                             <IoBagOutline />
                         </Button>
@@ -59,6 +64,7 @@ const Header = () => {
         </div>
       </header>
       <Navigation />
+      <hr class="header-separator"></hr>
     </>
   );
 };

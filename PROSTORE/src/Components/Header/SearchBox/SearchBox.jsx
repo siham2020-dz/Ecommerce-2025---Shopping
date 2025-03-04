@@ -8,7 +8,7 @@ const SearchBox = () => {
           <Button>
               <IoIosSearch />
           </Button>
-      </div>
+    </div>
 
     )
 };
